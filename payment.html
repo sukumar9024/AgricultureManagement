@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grabit - Payment</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <div class="tool-bar">
+        <div class="logo">
+            <h1 style="color: white;">Grabit</h1>
+            <div class="top-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="farmers_market.html">Market</a></li>
+                    <li><a href="my_account.html">Account</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="payment-form">
+        <form action="">
+            <h1>Customer Payment</h1>
+            <div class="input-payment">
+                <label for="Payment Type" >Payment Type</label>
+                <select name="payment-type" id="payment-type">
+                    <option value="credit-card">Credit Card</option>
+                    <option value="debit-card">Debit Card</option>
+                    <option value="">BHIM UPI</option>
+                </select>
+            </div>
+            <div class="input-payment">
+                <label for="card-holder-name">Card Holder Name:</label>
+                <input type="text" id="card-holder-name" required>
+            </div>
+            <div class="input-payment">
+                <label for="card-number">Card Number:</label>
+                <input type="number" id="card-number" required>
+            </div>
+            <div class="input-payment">
+                <label for="cvv-number">CVV Number:</label>
+                <input type="number" id="cvvnumber" required>
+            </div>
+            <div class="input-payment">
+                <label for="expiry-date">Expiry Date:</label>
+                <input type="date" id="expiry-date" required>
+            </div>
+            <div class="payable-amount">
+                <label for="payable-amount">Payment Amount:</label>
+                <input type="number" id="payable-amount" required>
+            </div>
+            <button class="btn">Make Payment</button>
+        </form>
+        
+    </div>
+</body>
+</html>

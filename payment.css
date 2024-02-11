@@ -1,0 +1,127 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.tool-bar{
+    background-color: #9db061;
+    padding: 10px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    max-height: 100%;
+    max-width: 100%;
+    background-image: url(./assets/background1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.logo{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-right: 3%;
+}
+.logo h3{
+    font-weight: 900;
+}
+
+.logo .top-menu{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.top-menu ul{
+    display: inline-flex;
+    max-width: 100%;
+    max-height: 100%;
+}
+.top-menu ul li a{
+    max-width: 75%;
+    display: inline;
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.top-menu ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.top-menu ul li a:hover{
+    color: black;
+    box-shadow: rgba(255,255,255,.2);
+    text-decoration: solid;
+}
+
+.top-menu ul li{
+    display: inline;
+    padding: 2%;   
+    font-size: 20px;
+}
+
+.payment-form{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: transparent;
+    border-radius: 30px;
+    margin: 40px;
+    padding: 30px;
+    background-color: bisque;
+    max-height: 100%;
+    max-width: 620px;
+    margin-left: 25%;
+    margin-top: 10%;
+}
+
+.payment-form form{
+    width: 420px;
+}
+.payment-form .input-payment{
+    padding: 5px 2px 2px 5px;
+    margin: 5px 2px 5px 2px;
+    width: 100%;
+}
+
+.payment-form .btn{
+    background-color: #bfcacc;
+    width: 300px;
+    margin-top: 5%;
+    padding: 8px;
+}
+
+.payment-form button:hover{
+    color: rgb(30, 183, 0);
+    background-color: rgb(227, 251, 90);
+    cursor: pointer;
+}
+
+.input-payment select{
+    width: 200px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.input-payment input{
+    border-radius: 10px;
+    padding: 5px;
+    width: 200px;
+}
+
+.payable-amount input{
+    width: calc(100%-60px);
+    margin-right: 10px;
+}
+
+.payment-form h1{
+    color: rgb(102 147 89);
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+}
