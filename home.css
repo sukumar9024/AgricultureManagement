@@ -1,0 +1,96 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html{
+    background-image: url(./assets/backgroundHome.jpeg);
+}
+.tool-bar{
+    backdrop-filter: blur(5px) 
+    saturate(70%);
+    padding: 10px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    max-height: 100%;
+    max-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.logo{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-right: 3%;
+}
+.logo h3{
+    font-weight: 900;
+}
+
+.logo .top-menu{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.top-menu ul{
+    display: inline-flex;
+    max-width: 100%;
+    max-height: 100%;
+}
+.top-menu ul li a{
+    max-width: 75%;
+    display: inline;
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.top-menu ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.top-menu ul li a:hover{
+    color: black;
+    box-shadow: rgba(255,255,255,.2);
+    text-decoration: solid;
+}
+
+.top-menu ul li{
+    display: inline;
+    padding: 2%;   
+    font-size: 20px;
+}
+.home-content{
+    display:block;
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    font-style: normal;
+    color: black;
+    font-weight: 900;
+    align-items: center;
+    
+}
+.home-content {
+    margin-top: 11%;
+    margin-left: 20%;
+    
+}
+.home-content div{
+    display: inline-block;
+    background: transparent;
+    
+}
+.home-content .tag-class{
+    position: relative;
+}
+.tag-line{
+    text-align: 200;
+}
