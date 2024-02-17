@@ -1,0 +1,133 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.tool-bar{
+    background-color: #9db061;
+    padding: 10px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    max-height: 100%;
+    max-width: 100%;
+    /* background-image: url(./assets/background1.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.logo{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-right: 3%;
+}
+.logo h3{
+    font-weight: 900;
+}
+
+.logo .top-menu{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.top-menu ul{
+    display: inline-flex;
+    max-width: 100%;
+    max-height: 100%;
+}
+.top-menu ul li a{
+    max-width: 75%;
+    display: inline;
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.top-menu ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.top-menu ul li a:hover{
+    color: black;
+    box-shadow: rgba(255,255,255,.2);
+    text-decoration: solid;
+}
+
+.top-menu ul li{
+    display: inline;
+    padding: 2%;   
+    font-size: 20px;
+
+}
+.heading{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 50px;
+}
+.content-box{
+    margin-top: 5%;
+    display: inline-block;
+    width:100%;
+}
+.image{
+    display: inline;
+}
+.image-icon img{
+    width:250px;
+    height:250px;
+    /* display: inline; */
+    float: left;
+    margin-right: 30px;
+    margin-bottom:100px;
+}
+.image-icon{
+    width:300px;
+    height: 300px;
+    margin-bottom: 100px;
+    display:inline;
+}
+.content-box label{
+    margin: 5px;
+}
+.content-box input{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width:90%
+}
+.set-inputs{
+    display: inline-block;
+    width: 30%;
+    height: 100px;
+}
+.lefti{
+    float:left;
+    margin-right: 10%;
+}
+.fulli{
+    float: left;
+    width:100%;
+    
+}
+.submit{
+    justify-content:center;
+    display:flex;
+}
+.submit button{
+    font-size:16px;
+    padding:10px;
+    border-radius: 5px;
+    
+    
+}
+input{
+    height:30px;
+    border-radius:30px;
+    padding:5px;
+}
