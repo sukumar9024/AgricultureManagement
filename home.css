@@ -108,5 +108,11 @@ button{
     width:100px
 }
 button:hover{
-    color: rgb(20, 208, 145);
+    background-color: rgb(20, 208, 145);
+    color: black;
+}
+
+.button button a{
+    text-decoration: none;
+    color: white;
 }

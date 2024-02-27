@@ -15,7 +15,7 @@
 
    <!-- HEADING -->
     <div class="centered-heading">
-      <h1>ALL ITEMS</h1>
+      <h1>Grabit</h1>
   </div>
 
   <!-- 3 BOXES(2 SELECTION BOXES, 1 SEARCH BUTTON BOX) -->
@@ -25,6 +25,7 @@
          <label for="state">Select State:</label>
          <select id="state">
             <!-- Options for states -->
+            <option value="select_state">Select State</option>
             <option value="andaman_and_nicobar">Andaman and Nicobar Islands</option>
             <option value="andhra_pradesh">Andhra Pradesh</option>
             <option value="arunachal_pradesh">Arunachal Pradesh</option>
@@ -84,6 +85,7 @@
 
       // Define a mapping of states to corresponding cities
       var citiesByState = {
+         'select_state': ['Select City'],
          'andaman_and_nicobar': ['South Andaman', 'North and Middle Andaman', 'Nicobar'],
          'andhra_pradesh': ['Anantapur', 'Chittoor', 'East Godavari', 'Guntur', 'Krishna', 'Kurnool', 'Nellore', 'Prakasam', 'Srikakulam', 'Visakhapatnam', 'Vizianagaram', 'West Godavari', 'YSR Kadapa'],
          'arunachal_pradesh' : ['Anjaw', 'Central Siang', 'Changlang', 'Dibang Valley', 'East Kameng', 'East Siang', 'Kamle', 'Kra Daadi', 'Kurung Kumey', 'Lepa Rada', 'Lohit', 'Longding', 'Lower Dibang Valley', 'Lower Siang', 'Lower Subansiri', 'Namsai', 'Pakke Kessang', 'Papum Pare', 'Shi Yomi', 'Tawang', 'Tirap', 'Upper Siang', 'Upper Subansiri', 'West Kameng', 'West Siang'],

@@ -135,4 +135,5 @@ label {
 
 .search-box button:hover{
    cursor: pointer;
+   background-color: #02823c;
 }

@@ -93,13 +93,37 @@ body{
     border-radius: 5%;
 }
 button{
-    padding: 2px;
+    padding: 5px;
     border-radius: 5%;
     border: white;
     background-color: rgb(15, 143, 234);
     color: white;
+    border-radius: 10%
 }
 .login-line{
     font-size: medium;
     font-weight: 600;
+}
+
+button a{
+    text-decoration: none;
+    color: white;
+}
+
+button a:hover{
+    cursor: pointer;
+    color: black;
+}
+button:hover{
+    background-color: green;
+}
+
+.register_buttons{
+    display: flex;
+    max-height: 20em;
+    max-width: 10em;
+
+}
+.register_buttons .button{
+    
 }
