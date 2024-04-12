@@ -1,137 +1,129 @@
 *{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-}
-.tool-bar{
-    background-color: #9db061;
-    padding: 10px;
-}
-
-body{
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    max-height: 100%;
-    max-width: 100%;
-    /* background-image: url(./assets/background1.jpg); */
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(./assets/backgroundHome.jpeg) no-repeat;
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
-}
-.logo{
+  }
+  .wrapper{
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(9px);
+    color: #fff;
+    border-radius: 12px;
+    padding: 30px 40px;
+  }
+  .wrapper h1{
+    font-size: 36px;
+    text-align: center;
+  }
+  .wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    
+    margin: 30px 0;
+  }
+  .input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+  }
+  .input-box input::placeholder{
+    color: #fff;
+  }
+  .input-box i{
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    transform: translate(-50%);
+    font-size: 20px;
+  
+  }
+  .wrapper .remember-forgot{
     display: flex;
     justify-content: space-between;
-    padding: 10px;
-    margin-right: 3%;
-}
-.logo h3{
-    font-weight: 900;
-}
-
-.logo .top-menu{
-    display: flex;
-    justify-content: flex-end;
-}
-
-.top-menu ul{
-    display: inline-flex;
-    max-width: 100%;
-    max-height: 100%;
-}
-.top-menu ul li a{
-    max-width: 75%;
-    display: inline;
-    text-align: center;
-    list-style: none;
-    text-decoration: none;
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.top-menu ul li a{
-    text-decoration: none;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+  }
+  .remember-forgot label input{
+    accent-color: #fff;
+    margin-right: 3px;
+  
+  }
+  .remember-forgot a{
     color: #fff;
-}
-.top-menu ul li a:hover{
-    color: black;
-    box-shadow: rgba(255,255,255,.2);
-    text-decoration: solid;
-}
-
-.top-menu ul li{
-    display: inline;
-    padding: 2%;   
-    font-size: 20px;
-
-}
-.heading{
-    margin-top: 30px;
+    text-decoration: none;
+  
+  }
+  .remember-forgot a:hover{
+    text-decoration: underline;
+  }
+  .wrapper .btn{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+  }
+  .wrapper .register-link{
+    font-size: 14.5px;
     text-align: center;
-    font-size: 1.5em;
-    margin-bottom: 50px;
-}
-.content-box{
-    margin-top: 5%;
-    display: inline-block;
-    width:100%;
-}
-.image{
-    display: inline;
-}
-.image-icon img{
-    width:250px;
-    height:250px;
-    /* display: inline; */
-    float: left;
-    margin-right: 30px;
-    margin-bottom:100px;
-}
-.image-icon{
-    width:300px;
-    height: 300px;
-    margin-bottom: 100px;
-    display:inline;
-}
-.content-box label{
-    margin: 5px;
-}
-.content-box input{
-    margin-top: 15px;
-    margin-bottom: 15px;
-    width:90%
-}
-.set-inputs{
-    display: inline-block;
-    width: 30%;
-    height: 100px;
-}
-.lefti{
-    float:left;
-    margin-right: 10%;
-}
-.fulli{
-    float: left;
-    width:100%;
-    
-}
-.submit{
-    justify-content:center;
-    display:flex;
-}
-.submit button{
-    font-size:16px;
-    padding:10px;
-    border-radius: 5px;
-    
-    
-}
-input{
-    height:30px;
-    border-radius:30px;
-    padding:5px;
+    margin: 20px 0 15px;
+  
+  }
+  .register-link p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .register-link p a:hover{
+    text-decoration: underline;
+  }
+
+
+.input-box input[type="email"]::placeholder,
+.input-box input[type="password"]::placeholder {
+  color: #fff;
 }
 
-button:hover{
-    background-color: green;
+.input-box i.bxs-envelope,
+.input-box i.bxs-lock-alt {
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  transform: translate(-50%);
+  font-size: 20px;
+}
+
+.wrapper .register-link p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.wrapper .register-link p a:hover {
+  text-decoration: underline;
 }
