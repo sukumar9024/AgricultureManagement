@@ -1,25 +1,27 @@
 <?php
 
-$_isvalid = False;
+$_isvalid = false;
 
-if ($_SERVER["REQUEST METHOD"] === "POST" ){
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mysqli = require __DIR__ . "/db.php";
 
-    $email = isset($_POST["email"]) ? $mysqli->real_escape_string($_POST["email"]): null;
-}
+    $email = isset($_POST["email"]) ? $mysqli->real_escape_string($_POST["email"]) : null;
 
-$sql = sprintf("SELECT * FROM users WHERE email='%s'",$email);
+    $sql = sprintf("SELECT * FROM customers_data WHERE email='%s'", $email);
 
-$result = $mtsqli->query($sql);
+    $result = $mysqli->query($sql);
 
-$user = $result->fetch_asso();
-if($user){
-    if (isset($_POST["password"]) && $_POST["password"] === $user["password"]){
-        session_start();
+    $user = $result->fetch_assoc();
 
-        $_SESSION["email"] = $_user["email"];
-        header("Location:index.html");
-        exit;
+    if ($user) {
+        $hashedPassword = password_hash($_POST["password"], PASSWORD_DEFAULT);
+        if (isset($_POST["password"]) && password_verify($hashedPassword, $user["password"])) {
+            session_start();
+
+            $_SESSION["email"] = $user["email"];
+            header("Location: ../index.html");
+            exit;
+        }
     }
 }
 ?>
