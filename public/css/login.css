@@ -1,0 +1,129 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./assets/background-login.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.tool-bar{
+    backdrop-filter: blur(5px) 
+    saturate(70%);
+    background-color: rgba(163, 83, 83, 0.5);
+    padding: 10px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    max-height: 100%;
+    max-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.logo{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-right: 3%;
+}
+.logo h3{
+    font-weight: 900;
+}
+
+.logo .top-menu{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.top-menu ul{
+    display: inline-flex;
+    max-width: 100%;
+    max-height: 100%;
+}
+.top-menu ul li a{
+    max-width: 75%;
+    display: inline;
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.top-menu ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.top-menu ul li a:hover{
+    color: black;
+    box-shadow: rgba(255,255,255,.2);
+    text-decoration: solid;
+}
+
+.top-menu ul li{
+    display: inline;
+    padding: 2%;   
+    font-size: 20px;
+}
+.login-cointainer{
+    display: flex;
+    height: 79vh;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.login-cointainer > *{
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    padding: 10px;
+    
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+    background-color: aliceblue;
+    border-radius: 5%;
+}
+button{
+    padding: 5px;
+    border-radius: 5%;
+    border: white;
+    background-color: rgb(15, 143, 234);
+    color: white;
+    border-radius: 10%
+}
+.login-line{
+    font-size: medium;
+    font-weight: 600;
+}
+
+button a{
+    text-decoration: none;
+    color: white;
+}
+
+button a:hover{
+    cursor: pointer;
+    color: black;
+}
+button:hover{
+    background-color: green;
+}
+
+.register_buttons{
+    display: flex;
+    max-height: 20em;
+    max-width: 10em;
+
+}
+.register_buttons .button{
+    
+}
