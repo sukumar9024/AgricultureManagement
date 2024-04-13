@@ -1,0 +1,104 @@
+/* Style the shopping cart container */
+.shopping-cart {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #67a092;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 5%;
+    border-radius: 20px;
+}
+
+/* Style the heading */
+.shopping-cart h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Style the items count */
+.shopping-cart .items {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Style the order summary */
+.shopping-cart .order-summary {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+/* Style the order summary heading */
+.shopping-cart .order-summary h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Style the product items */
+.shopping-cart .order-summary .product-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Align items evenly */
+}
+
+/* Style individual product */
+.product {
+    width: 30%; /* Adjust as needed */
+    margin-bottom: 20px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px; /* Add some space between image and details */
+}
+
+.product .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-name-display {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity button {
+    background-color: #ddd;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.quantity input {
+    width: 40px;
+    text-align: center;
+}
+
+.remove-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background-color: darkred;
+}
+
+img{
+    border-radius: 20px;
+
+}
+
+.remove-btn:active {
+    background-color: #e35a15;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }

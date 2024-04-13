@@ -1,47 +1,32 @@
 <?php
-session_start();
+// Include the database connection
+include 'db.php';
 
-// Assuming you have a database connection established in the trains.php file
-$mysqli = require __DIR__ . "/trains.php";
+// Check if the state and district are set in the POST request
+if (isset($_POST['state']) && isset($_POST['district'])) {
+    // Sanitize the inputs to prevent SQL injection
+    $selectedState = mysqli_real_escape_string($connection, $_POST['state']);
+    $selectedDistrict = mysqli_real_escape_string($connection, $_POST['district']);
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $startStation = $_POST["start_station"];
+    // Perform a database query to fetch data based on the selected state and district
+    $query = "SELECT * FROM product WHERE state = '$selectedState' AND district = '$selectedDistrict'";
+    $result = mysqli_query($connection, $query);
 
-    // Query to retrieve trains from the database based on the start station
-    $query = "SELECT * FROM trainbetweenstations WHERE FromStation = '$startStation'";
-    $result = $mysqli->query($query);
-
-    // Check if there are any trains found
-    if ($result && $result->num_rows > 0) {
-        $trainsData = array();
-
-        // Fetch each row from the result set and add it to $trainsData array
-        while ($row = $result->fetch_assoc()) {
-            $trainsData[] = array(
-                "trainName" => $row["TrainName"],
-                "runningDays" => $row["RunningDays"],
-                "startTime" => $row["SourceTime"],
-                "destinationTime" => $row["DestinationTime"],
-                "categories" => array(
-                    array("name" => "AC3", "seatsAvailable" => 50),
-                    array("name" => "AC2", "seatsAvailable" => 30),
-                    array("name" => "AC1", "seatsAvailable" => 20)
-                    // Add more categories as needed
-                )
-            );
+    // Check if any rows were returned
+    if (mysqli_num_rows($result) > 0) {
+        // Fetch data as an associative array
+        $data = [];
+        while ($row = mysqli_fetch_assoc($result)) {
+            $data[] = $row;
         }
-
-        // Pass $trainsData to the HTML page using session variable
-        $_SESSION["trainsData"] = $trainsData;
-
-        // Redirect to train_results.html
-        header("Location: train_results.php");
-        exit();
+        // Return the fetched data as JSON
+        echo json_encode($data);
     } else {
-        echo "No trains found for the given start station.";
+        // If no items are present, return a message
+        echo json_encode(["message" => "No items found"]);
     }
-
-    // Close the database connection
-    $mysqli->close();
+} else {
+    // If state and district are not set in the POST request, return an error message
+    echo json_encode(["error" => "State and district parameters are required"]);
 }
 ?>

@@ -8,12 +8,6 @@ body{
     background-position: center;
     background-repeat: no-repeat;
 }
-.tool-bar{
-    backdrop-filter: blur(5px) 
-    saturate(70%);
-    background-color: rgba(163, 83, 83, 0.5);
-    padding: 10px;
-}
 
 body{
     margin: 0;

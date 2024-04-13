@@ -1,0 +1,111 @@
+body {
+    background: rgb(99, 39, 120)
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8
+}
+
+.profile-button {
+    background: rgb(99, 39, 120);
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: #682773
+}
+
+.profile-button:focus {
+    background: #682773;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #682773;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 11px
+}
+
+.add-experience:hover {
+    background: #BA68C8;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #BA68C8
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #94340a;
+    z-index: 99;
+  }
+  
+  .nav__content {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  nav .logo a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: 0.3s;
+    text-decoration: none;
+  }
+  
+  nav .logo a:hover {
+    color: var(--primary-color-dark);
+  }
+  
+  nav .checkbox {
+    display: none;
+  }
+  
+  nav input {
+    display: none;
+  }
+  nav .checkbox i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+  }
+  
+  ul li a {
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: 0.3s;
+  }
+  
+  ul li a:hover {
+    border-top-color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
+    color: var(--secondary-color);
+  }
+
+  

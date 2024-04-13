@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (password_verify($password, $user["password"])) {
             // Password is correct, set session variables and redirect
             $_SESSION["email"] = $user["email"];
-            header("Location:../States_Districts/dynamically_changing_cities_JS.html");
+            header("Location:../States_Districts/dynamically_changing_cities_JS.php");
             exit;
         } else {
             // Password is incorrect
