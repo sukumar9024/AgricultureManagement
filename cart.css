@@ -42,14 +42,17 @@
 
 /* Style individual product */
 .product {
-    width: 30%; /* Adjust as needed */
     margin-bottom: 20px;
+    border: 1px solid #080000;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .product img {
     width: 100%;
     height: auto;
     margin-bottom: 10px; /* Add some space between image and details */
+    border-radius: 20px; /* Apply border radius */
 }
 
 .product .info {
@@ -68,19 +71,21 @@
 }
 
 .quantity button {
-    background-color: #ddd;
+    background-color: #007bff;
+    color: #fff;
     border: none;
-    padding: 5px;
+    padding: 5px 10px;
     cursor: pointer;
+    margin: 0 5px;
 }
 
 .quantity input {
-    width: 40px;
+    width: 50px;
     text-align: center;
 }
 
 .remove-btn {
-    background-color: red;
+    background-color: #dc3545;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -92,13 +97,8 @@
     background-color: darkred;
 }
 
-img{
-    border-radius: 20px;
-
-}
-
 .remove-btn:active {
     background-color: #e35a15;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-  }
+}

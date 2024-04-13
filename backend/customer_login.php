@@ -18,8 +18,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         // Verify the hashed password
         if (password_verify($password, $user["password"])) {
-            // Password is correct, set session variables and redirect
+            // Password is correct, set session variables
             $_SESSION["email"] = $user["email"];
+            $_SESSION["username"] = $user["username"]; // Assuming 'username' exists in your database
+            $_SESSION["logged_in"] = true; // Flag to indicate user is logged in
+            // Redirect to desired page
             header("Location:../States_Districts/dynamically_changing_cities_JS.php");
             exit;
         } else {
@@ -31,8 +34,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         echo "User not found.";
     }
 } else {
-    // Redirect back to login page if accessed directly
-    header("Location: ../login.html");
-    exit;
+    // Check if user is already logged in
+    if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true) {
+        // User is already logged in, redirect to desired page
+        header("Location:../States_Districts/dynamically_changing_cities_JS.php");
+        exit;
+    } else {
+        // Redirect back to login page if accessed directly
+        header("Location: ../login.html");
+        exit;
+    }
 }
 ?>

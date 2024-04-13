@@ -1,3 +1,36 @@
+<?php
+session_start();
+
+// Check if the user clicked the logout button
+if(isset($_POST['logout'])) {
+    // Unset all of the session variables
+    $_SESSION = array();
+
+    // Destroy the session
+    session_destroy();
+
+    // Redirect to login page
+    header("Location: ../login.html");
+    exit;
+}
+
+// Check if the user is logged in
+if(!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true) {
+    // Redirect back to login page if not logged in
+    header("Location: ../login.html");
+    exit;
+}
+
+// Check if username is set in session
+if(isset($_SESSION["username"])) {
+    $username = $_SESSION["username"];
+} else {
+    // If username is not set, redirect to login page
+    header("Location: ../login.html");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,8 +50,11 @@
             <ul style="display: flex; align-items: center; gap: 1rem; list-style: none; transition: left 0.3s;">
                <li><a href="index.html">Home</a></li>
                <li><a href="login.html">Login</a></li>
-               <li><a href="my-account.html">Market</a></li>
-               <li><a href="../cart.html">Cart</a></li>
+               <li><a href="../cart.php">Cart</a></li>
+               <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+                  <button type="submit" name="logout" style="color:red;">Logout</button>
+               </form>
+
             </ul>
          </div>
    </nav>
@@ -127,7 +163,8 @@
                 echo "<p class='seller-name'>" . $row["seller"] . "</p>";
                 echo "<p class='rating'>Rating: " . $row["rating"] . "</p>";
                 echo "<p class='price'>Price: $" . $row["price"] . "</p>";
-                echo "<button class='add-to-cart'>Add to Cart</button>";
+                 // Modify the button to include the productId as a data attribute
+                echo "<button class='add-to-cart' data-productId='" . $row["id"] . "'>Add to Cart</button>";
                 echo "</div>"; // Close product-details
                 echo "</div>"; // Close product-card
             }
